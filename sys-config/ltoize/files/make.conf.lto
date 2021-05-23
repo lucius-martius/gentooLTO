@@ -9,9 +9,10 @@
 #NTHREADS="12" 
 
 #A good number is the number of hardware threads you have available on your system.
+#You may also set this to "auto" to have gcc determine optimal number of cores (GCC 10+) 
 #After this, but before any other variables are defined, source this file directly:
 
-#source make.conf.lto
+#source /etc/portage/make.conf.lto
 
 #Then, afterwards, define your CFLAGS with your own options:
 
@@ -70,7 +71,7 @@
 #If you want to cherry pick these settings, source make.conf.lto.defines directly
 #and read the comments in that file.
 
-source make.conf.lto.defines
+source /etc/portage/make.conf.lto.defines
 
 #Thanks to issue #49, no action necessary for preventing stripping of static libraries
 
